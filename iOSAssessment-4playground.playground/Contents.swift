@@ -31,9 +31,35 @@ import UIKit
 
 
 
+
+
 //
 //2. Create a class and write the delegate of UITextField in extension of that class.
 //
+class LoginTextFieldViewController: UIViewController {
+    // here we need to confirm delegate in viewdidLoad() method in our xcode application. textfield will show when we create iboutlets --  according to the question here only delegate example through extension.
+}
+
+extension LoginTextFieldViewController: UITextFieldDelegate {
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+            print("TextField should begin editing method called")
+            return true;
+        }
+        func textFieldShouldClear(_ textField: UITextField) -> Bool {
+            print("TextField should clear method called")
+            return true;
+        }
+        func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+            print("TextField should end editing method called")
+            return true;
+        }
+}
+
+
+
+
+
 
 
 //3. Write a protocol and create an extension of the protocol. In extension create a function
@@ -44,8 +70,29 @@ import UIKit
 //
 //}
 //
+protocol Greet {
+    func greet() -> String
+}
+
+class A {
+    var name: String
+    
+    init(name: String) {
+        self.name = name
+    }
+}
+
+extension A: Greet {
+    
+    func greet() -> String {
+        print("Hello!")
+        return "Hello!, \(name)"
+    }
+}
 
 
+var a = A(name: "Satyam")
+a.greet()
 
 
 
