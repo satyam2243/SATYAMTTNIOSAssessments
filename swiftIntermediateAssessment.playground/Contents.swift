@@ -2,6 +2,35 @@ import UIKit
 import Foundation
 import CoreGraphics
 
+
+
+//Question 1. Write a function called siftBeans(fromGroceryList:) that takes a grocery list (as an array of strings) and “sifts out” the beans from the other groceries. The function should take one argument that has a parameter name called list, and it should return a named tuple of the type (beans: [String], otherGroceries: [String]).
+
+
+func siftBeans(arr : [String]) -> (beans : [String],otherGroceries : [String]){
+    
+    var beans = [String]()
+    var groceries = [String]()
+    
+    for grocery in arr{
+        if grocery.contains("beans"){
+            beans.append(grocery)
+        }else{
+            groceries.append(grocery)
+        }
+    }
+    
+    return (beans,groceries)
+}
+
+var groceryList = ["green beans","milk","black beans","pinto beans","apples"]
+let result = siftBeans(arr : groceryList)
+
+print(result.beans)
+print(result.otherGroceries)
+
+
+
 // Question 2 - Make a calculator class with a function name “equals” that take an enum case as value like multiply, subtraction, addition, square root, division.
 
 enum Operators {
