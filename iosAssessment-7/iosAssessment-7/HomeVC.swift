@@ -1,0 +1,33 @@
+//
+//  HomeVc.swift
+//  iosAssessment-7
+//
+//  Created by satyam dixit on 04/10/21.
+//
+
+import UIKit
+
+class HomeVC: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        self.navigationController?.navigationBar.largeContentTitle = "HOME"
+        
+    }
+    
+}
+
+//MARK: IBActions-->>
+//MARK: ---
+extension HomeVC {
+    
+    @IBAction func goToDetails(_ sender: UIButton) {
+        let myStoryborad = UIStoryboard(name: "Main", bundle: nil)
+        
+        let vc = myStoryborad.instantiateViewController(withIdentifier: "SegmentControlVC") as? SegmentControlVC
+        
+        self.navigationController?.pushViewController(vc!, animated: true)
+    }
+    
+}
