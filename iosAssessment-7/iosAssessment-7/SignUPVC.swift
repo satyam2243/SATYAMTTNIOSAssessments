@@ -26,7 +26,7 @@ class SignUPVC: UIViewController {
     //MARK: ---
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.title = "SIGN UP"
+        UINavigationBar.appearance().barTintColor = .gray
     }
 }
 
@@ -77,4 +77,26 @@ extension SignUPVC: UINavigationControllerDelegate, UIImagePickerControllerDeleg
         
         imageView.image = image
     }
+}
+
+extension SignUPVC: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        switch textField {
+            
+        case tfUserName:
+            tfEmail.becomeFirstResponder()
+        case tfEmail:
+            tfPhoneNo.becomeFirstResponder()
+        case tfPhoneNo:
+            tfBirthPlace.becomeFirstResponder()
+        default:
+            tfDOB.resignFirstResponder()
+            
+        }
+        
+        return true
+    }
+    
 }

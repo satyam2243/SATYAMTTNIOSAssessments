@@ -16,7 +16,6 @@ class SegmentControlVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.title = "SEGMENT CONTROL"
     }
     
     
