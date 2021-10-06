@@ -9,6 +9,8 @@ import UIKit
 
 class HomeVC: UIViewController {
 
+    @IBOutlet weak var TVtextView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,11 +23,13 @@ class HomeVC: UIViewController {
 extension HomeVC {
     
     @IBAction func goToDetails(_ sender: UIButton) {
-        let myStoryborad = UIStoryboard(name: "Main", bundle: nil)
-        
-        let vc = myStoryborad.instantiateViewController(withIdentifier: "SegmentControlVC") as? SegmentControlVC
-        
-        self.navigationController?.pushViewController(vc!, animated: true)
+        if TVtextView.text != "" {
+            let myStoryborad = UIStoryboard(name: "Main", bundle: nil)
+            
+            let vc = myStoryborad.instantiateViewController(withIdentifier: "SegmentControlVC") as? SegmentControlVC
+            
+            self.navigationController?.pushViewController(vc!, animated: true)
+        }
     }
     
 }

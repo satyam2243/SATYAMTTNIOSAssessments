@@ -79,9 +79,6 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ARv-KY-zj1">
                                 <rect key="frame" x="306" y="548" width="51" height="31"/>
                                 <color key="onTintColor" red="0.78431367870000002" green="0.2352941036" blue="0.34901961679999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <connections>
-                                    <action selector="accSwitch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bm2-K0-svX"/>
-                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Keep my account Private" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0DA-DN-GbX">
                                 <rect key="frame" x="20" y="548" width="227" height="24"/>
@@ -137,7 +134,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="SIGN UP" id="Ht3-eb-6Ka"/>
                     <connections>
-                        <outlet property="accountSwitch" destination="ARv-KY-zj1" id="uki-gO-uQS"/>
                         <outlet property="chooseBuuton" destination="ao2-K7-9d0" id="0HI-vM-dWL"/>
                         <outlet property="imageView" destination="qii-2b-Nc4" id="v9V-7d-KHD"/>
                         <outlet property="tfBirthPlace" destination="DGr-dc-UJR" id="UHx-00-y3y"/>
@@ -227,6 +223,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="HOME" id="HTc-Jk-bZT"/>
+                    <connections>
+                        <outlet property="TVtextView" destination="CAm-je-lzm" id="VST-GW-6xB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Xc-CB-Lsm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
