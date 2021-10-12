@@ -26,12 +26,6 @@ class AutolayoutProgramaticVc: UIViewController {
     @IBOutlet weak var view3: UIView!
     @IBOutlet weak var view4: UIView!
     
-//IBOutlets for stackViews ---->>>>
-    
-//    @IBOutlet weak var mainStackView: UIStackView!
-//    @IBOutlet weak var firstVerticalStackView: UIStackView!
-//    @IBOutlet weak var secondVerticalStackView: UIStackView!
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,50 +38,102 @@ class AutolayoutProgramaticVc: UIViewController {
         lbl3.translatesAutoresizingMaskIntoConstraints = false
         lbl4.translatesAutoresizingMaskIntoConstraints = false
        
+        img1ContraintsSet()
+        img2ContraintsSet()
+        img3ContraintsSet()
+        img4ContraintsSet()
+        label1ContraintsSet()
+        label2ContraintsSet()
+        label3ContraintsSet()
+        label4ContraintsSet()
+    }
+    
+    
+    private func img1ContraintsSet(){
         
-        let img1TopContraint = img1.topAnchor.constraint(equalTo: view1.topAnchor, constant: 10)
-        let img1LeadingContraint = img1.leadingAnchor.constraint(equalTo: view1.leadingAnchor, constant: 10)
-        let img1BottomContraint = img1.bottomAnchor.constraint(equalTo: view1.bottomAnchor, constant: 30)
-        let img1TrailingContraint = img1.trailingAnchor.constraint(equalTo: view1.trailingAnchor, constant: 10)
-//        let img1WidthContraint = img1.widthAnchor.constraint(equalToConstant: 170)
-//        let img1HeightContraint = img1.heightAnchor.constraint(equalToConstant: 300)
-
-        NSLayoutConstraint.activate([img1TopContraint, img1LeadingContraint, img1BottomContraint, img1TrailingContraint])
+        NSLayoutConstraint.activate([
+            img1.topAnchor.constraint(equalTo: view1.topAnchor, constant: 40),
+            img1.leadingAnchor.constraint(equalTo: view1.leadingAnchor, constant: 30),
+            img1.bottomAnchor.constraint(equalTo: view1.bottomAnchor, constant: -40),
+            img1.trailingAnchor.constraint(equalTo: view1.trailingAnchor, constant: -30)
+        ])
         
+    }
+    
+    
+    private func img2ContraintsSet(){
         
-        
-        let img2TopContraint = img2.topAnchor.constraint(equalTo: view2.topAnchor, constant: 10)
-        let img2LeadingContraint = img2.leadingAnchor.constraint(equalTo: view2.leadingAnchor, constant: 10)
-        let img2BottomContraint = img2.bottomAnchor.constraint(equalTo: view2.bottomAnchor, constant: 30)
-        let img2TrailingContraint = img2.trailingAnchor.constraint(equalTo: view2.trailingAnchor, constant: 10)
-//        let img2WidthContraint = img2.widthAnchor.constraint(equalToConstant: 170)
-//        let img2HeightContraint = img2.heightAnchor.constraint(equalToConstant: 300)
-        
-        NSLayoutConstraint.activate([img2TopContraint, img2TrailingContraint, img2LeadingContraint, img2BottomContraint])
-
-        
-        
-        //let img3TopContraint = img3.topAnchor.constraint(equalTo: view3.topAnchor, constant: 10)
-        let img3LeadingContraint = img3.leadingAnchor.constraint(equalTo: view3.leadingAnchor, constant: 10)
-        let img3BottomContraint = img3.bottomAnchor.constraint(equalTo: view3.bottomAnchor, constant: 30)
-       // let img3TrailingContraint = img3.trailingAnchor.constraint(equalTo: view3.trailingAnchor, constant: 10)
-        let img3WidthContraint = img3.widthAnchor.constraint(equalToConstant: 170)
-        let img3HeightContraint = img3.heightAnchor.constraint(equalToConstant: 300)
-        
-        NSLayoutConstraint.activate([img3BottomContraint, img3LeadingContraint, img3WidthContraint, img3HeightContraint])
-        
-        
-        
-//        let img4TopContraint = img4.topAnchor.constraint(equalTo: view4.topAnchor, constant: 10)
-//        let img4LeadingContraint = img4.leadingAnchor.constraint(equalTo: view2.leadingAnchor, constant: 10)
-        let img4BottomContraint = img4.bottomAnchor.constraint(equalTo: view4.bottomAnchor, constant: 30)
-        let img4TrailingContraint = img4.trailingAnchor.constraint(equalTo: view4.trailingAnchor, constant: 10)
-        let img4WidthContraint = img4.widthAnchor.constraint(equalToConstant: 170)
-        let img4HeightContraint = img4.heightAnchor.constraint(equalToConstant: 300)
-        
-        NSLayoutConstraint.activate([ img4TrailingContraint, img4BottomContraint, img4WidthContraint, img4HeightContraint])
+        NSLayoutConstraint.activate([
+            img2.topAnchor.constraint(equalTo: view2.topAnchor, constant: 40),
+            img2.leadingAnchor.constraint(equalTo: view2.leadingAnchor, constant: 30),
+            img2.bottomAnchor.constraint(equalTo: view2.bottomAnchor, constant: -40),
+            img2.trailingAnchor.constraint(equalTo: view2.trailingAnchor, constant: -30)
+        ])
 
     }
     
+    
+    private func img3ContraintsSet(){
+        
+        NSLayoutConstraint.activate([
+            img3.topAnchor.constraint(equalTo: view3.topAnchor, constant: 40),
+            img3.leadingAnchor.constraint(equalTo: view3.leadingAnchor, constant: 30),
+            img3.bottomAnchor.constraint(equalTo: view3.bottomAnchor, constant: -40),
+            img3.trailingAnchor.constraint(equalTo: view3.trailingAnchor, constant: -30)
+        ])
+        
+    }
+    
+    private func img4ContraintsSet(){
+ 
+        NSLayoutConstraint.activate([
+            img4.topAnchor.constraint(equalTo: view4.topAnchor, constant: 40),
+            img4.leadingAnchor.constraint(equalTo: view2.leadingAnchor, constant: 30),
+            img4.bottomAnchor.constraint(equalTo: view4.bottomAnchor, constant: -40),
+            img4.trailingAnchor.constraint(equalTo: view4.trailingAnchor, constant: -30)
+        ])
+
+    }
+    
+    private func label1ContraintsSet(){
+        
+        NSLayoutConstraint.activate([
+            lbl1.topAnchor.constraint(equalTo: img1.bottomAnchor, constant: 5),
+            lbl1.leadingAnchor.constraint(equalTo: img1.leadingAnchor),
+            lbl1.trailingAnchor.constraint(equalTo: img1.trailingAnchor)
+        ])
+        
+    }
+    
+    
+    private func label2ContraintsSet(){
+        
+        NSLayoutConstraint.activate([
+            lbl2.topAnchor.constraint(equalTo: img2.bottomAnchor, constant: 5),
+            lbl2.leadingAnchor.constraint(equalTo: img2.leadingAnchor),
+            lbl2.trailingAnchor.constraint(equalTo: img2.trailingAnchor)
+        ])
+        
+    }
+    
+    private func label3ContraintsSet(){
+        
+        NSLayoutConstraint.activate([
+            lbl3.topAnchor.constraint(equalTo: img3.bottomAnchor, constant: 5),
+            lbl3.leadingAnchor.constraint(equalTo: img3.leadingAnchor),
+            lbl3.trailingAnchor.constraint(equalTo: img3.trailingAnchor)
+        ])
+        
+    }
+    
+    private func label4ContraintsSet(){
+        
+        NSLayoutConstraint.activate([
+            lbl4.topAnchor.constraint(equalTo: img4.bottomAnchor, constant: 5),
+            lbl4.leadingAnchor.constraint(equalTo: img4.leadingAnchor),
+            lbl4.trailingAnchor.constraint(equalTo: img4.trailingAnchor)
+        ])
+        
+    }
     
 }
