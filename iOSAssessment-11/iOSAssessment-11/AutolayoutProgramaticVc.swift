@@ -26,12 +26,12 @@ class AutolayoutProgramaticVc: UIViewController {
     @IBOutlet weak var view3: UIView!
     @IBOutlet weak var view4: UIView!
     
-    //    //IBOutlets for stackViews
+//IBOutlets for stackViews ---->>>>
     
-    //    @IBOutlet weak var mainStackView: UIStackView!
+//    @IBOutlet weak var mainStackView: UIStackView!
 //    @IBOutlet weak var firstVerticalStackView: UIStackView!
 //    @IBOutlet weak var secondVerticalStackView: UIStackView!
-//
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -60,26 +60,34 @@ class AutolayoutProgramaticVc: UIViewController {
         let img2LeadingContraint = img2.leadingAnchor.constraint(equalTo: view2.leadingAnchor, constant: 10)
         let img2BottomContraint = img2.bottomAnchor.constraint(equalTo: view2.bottomAnchor, constant: 30)
         let img2TrailingContraint = img2.trailingAnchor.constraint(equalTo: view2.trailingAnchor, constant: 10)
+//        let img2WidthContraint = img2.widthAnchor.constraint(equalToConstant: 170)
+//        let img2HeightContraint = img2.heightAnchor.constraint(equalToConstant: 300)
         
-        NSLayoutConstraint.activate([img2TopContraint, img2TrailingContraint, img2BottomContraint, img2LeadingContraint])
+        NSLayoutConstraint.activate([img2TopContraint, img2TrailingContraint, img2LeadingContraint, img2BottomContraint])
 
         
-        let img3TopContraint = img3.topAnchor.constraint(equalTo: view3.topAnchor, constant: 10)
+        
+        //let img3TopContraint = img3.topAnchor.constraint(equalTo: view3.topAnchor, constant: 10)
         let img3LeadingContraint = img3.leadingAnchor.constraint(equalTo: view3.leadingAnchor, constant: 10)
         let img3BottomContraint = img3.bottomAnchor.constraint(equalTo: view3.bottomAnchor, constant: 30)
-        let img3TrailingContraint = img3.trailingAnchor.constraint(equalTo: view3.trailingAnchor, constant: 10)
+       // let img3TrailingContraint = img3.trailingAnchor.constraint(equalTo: view3.trailingAnchor, constant: 10)
+        let img3WidthContraint = img3.widthAnchor.constraint(equalToConstant: 170)
+        let img3HeightContraint = img3.heightAnchor.constraint(equalToConstant: 300)
         
-        NSLayoutConstraint.activate([img3TopContraint, img3TrailingContraint, img3BottomContraint, img3LeadingContraint])
+        NSLayoutConstraint.activate([img3BottomContraint, img3LeadingContraint, img3WidthContraint, img3HeightContraint])
         
         
         
-        let img4TopContraint = img4.topAnchor.constraint(equalTo: view4.topAnchor, constant: 10)
-        let img4LeadingContraint = img4.leadingAnchor.constraint(equalTo: view2.leadingAnchor, constant: 10)
+//        let img4TopContraint = img4.topAnchor.constraint(equalTo: view4.topAnchor, constant: 10)
+//        let img4LeadingContraint = img4.leadingAnchor.constraint(equalTo: view2.leadingAnchor, constant: 10)
         let img4BottomContraint = img4.bottomAnchor.constraint(equalTo: view4.bottomAnchor, constant: 30)
         let img4TrailingContraint = img4.trailingAnchor.constraint(equalTo: view4.trailingAnchor, constant: 10)
+        let img4WidthContraint = img4.widthAnchor.constraint(equalToConstant: 170)
+        let img4HeightContraint = img4.heightAnchor.constraint(equalToConstant: 300)
         
-        NSLayoutConstraint.activate([img4TopContraint, img4TrailingContraint, img4BottomContraint, img4LeadingContraint])
+        NSLayoutConstraint.activate([ img4TrailingContraint, img4BottomContraint, img4WidthContraint, img4HeightContraint])
 
     }
+    
     
 }
