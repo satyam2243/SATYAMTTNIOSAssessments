@@ -23,13 +23,16 @@ class GreetViewController: UIViewController {
     var imgRoundDelegate: Roundable?
     var imgBorderSetDelegate: Bordable?
     var greetViewSetBorderDelegate: Bordable?
+    var showAlertDelegate: ShowToastProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.navigationController?.isNavigationBarHidden = false
         imgRoundDelegate = self
         imgBorderSetDelegate = self
         greetViewSetBorderDelegate = self
+        showAlertDelegate = self
         
         SetUp()
     }
@@ -42,11 +45,11 @@ class GreetViewController: UIViewController {
         
         if(detailedClientData.count > detailedEmployeeData.count) {
             for item in detailedClientData {
-                self.id.text = String(item.id)
-                self.name.text = item.name
-                self.email.text = item.email
-                self.Address.text = item.address
-                self.phoneNo.text = item.phoneNumber
+                self.id.text = "EmployeeID : " + String(item.id)
+                self.name.text = "Name : " + item.name
+                self.email.text = "Email : " + item.email
+                self.Address.text = "Address : " + item.address
+                self.phoneNo.text = "PhoneNo. : " + item.phoneNumber
                 self.img.image = UIImage(named: "\(item.image)")
             }
         } else {
@@ -62,9 +65,28 @@ class GreetViewController: UIViewController {
 
     }
     
+    @IBAction func greetUserButton(_ sender: UIBarButtonItem) {
+        showAlertDelegate?.showToastMsg(title: "Greetings", message: "Welcome Mr. \(name.text ?? "Guest")")
+    }
+    
+    @IBAction func logouButton(_ sender: UIButton) {
+        UserDefaults.standard.removeObject(forKey: "username")
+        UserDefaults.standard.removeObject(forKey: "useremail")
+        UserDefaults.standard.removeObject(forKey: "userphone")
+        UserDefaults.standard.synchronize()
+        
+        showAlertDelegate?.showToastMsg(title: "Hey", message: "LoggedOutSuccessFully")
+        
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    
 }
 
-extension GreetViewController : Roundable, Bordable {
+extension GreetViewController : Roundable, Bordable, ShowToastProtocol {
+    
+    func showToastMsg(title: String, message: String) {
+       alertShow(title: title, message: message)
+    }
     
     func round() {
         self.img.layer.cornerRadius = self.img.layer.frame.width / 2
@@ -76,4 +98,3 @@ extension GreetViewController : Roundable, Bordable {
     }
     
 }
-

@@ -11,6 +11,13 @@ class UserInfoViewController: UIViewController {
 
     @IBOutlet weak var userInfoTableView: UITableView!
     
+    var employeeId = "1001"
+    var userEmail: String?
+    var username: String?
+    var userPhone: String?
+    
+    var showLoggedInSuccessAlertDelegate: ShowToastProtocol?
+    
     private let employeeDatabase = [
                                     Employee(email: "sat321@gmail.com", phoneNumber: "8868092243", employeeId: 101, fName: "satyam", lName: "Dixit", imageUser: "img4", userRole: "Developer", joiningDate: "10/9/2021", id: 1, address: "Etawah, U.P."),
 
@@ -32,6 +39,9 @@ class UserInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.isNavigationBarHidden = true
+        showLoggedInSuccessAlertDelegate = self
+        showLoggedInSuccessAlertDelegate?.showToastMsg(title: "Welcome", message: "Mr. \(username ?? "Guest") You are LoggedIn SuccessFully")
         tableViewSetup()
     }
 
@@ -75,11 +85,11 @@ extension UserInfoViewController: UITableViewDelegate, UITableViewDataSource {
         switch indexPath.section {
             
         case 0:
-            cell1?.employeeId.text = "ID : " + "10001"
-            cell1?.userEmail.text = "Email : " + "tcrahul4321@gmail.com"
+            cell1?.employeeId.text = "ID : " + self.employeeId
+            cell1?.userEmail.text = "Email : " + self.userEmail!
             cell1?.userImage.image = UIImage(named: "img1")
-            cell1?.username.text = "Name : " + "Rahul Dravid"
-            cell1?.userPhone.text = "PhoneNo. : " + "+91 9502018869"
+            cell1?.username.text = "Name : " + self.username!
+            cell1?.userPhone.text = "PhoneNo. : +91" + self.userPhone!
             cell1?.UserView.layer.borderWidth = 5.0
             return cell1!
             
@@ -166,3 +176,8 @@ extension UserInfoViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
+extension UserInfoViewController: ShowToastProtocol {
+    func showToastMsg(title: String, message: String) {
+        alertShow(title: title, message: message)
+    }
+}

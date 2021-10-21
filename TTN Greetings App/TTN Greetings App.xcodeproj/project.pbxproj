@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		4A99EBB32717E0CD005EFE95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A99EBB22717E0CD005EFE95 /* AppDelegate.swift */; };
 		4A99EBB52717E0CD005EFE95 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A99EBB42717E0CD005EFE95 /* SceneDelegate.swift */; };
-		4A99EBB72717E0CD005EFE95 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A99EBB62717E0CD005EFE95 /* ViewController.swift */; };
 		4A99EBBA2717E0CD005EFE95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A99EBB82717E0CD005EFE95 /* Main.storyboard */; };
 		4A99EBBC2717E0CE005EFE95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A99EBBB2717E0CE005EFE95 /* Assets.xcassets */; };
 		4A99EBBF2717E0CE005EFE95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A99EBBD2717E0CE005EFE95 /* LaunchScreen.storyboard */; };
 		4A99EBC72717E19E005EFE95 /* CustomProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A99EBC62717E19D005EFE95 /* CustomProtocols.swift */; };
+		903D330327214DA400B4B100 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903D330227214DA400B4B100 /* Extensions.swift */; };
 		9079BBB3271FB5EC00950E03 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9079BBB2271FB5EC00950E03 /* Employee.swift */; };
 		9079BBB5271FB60A00950E03 /* Clients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9079BBB4271FB60A00950E03 /* Clients.swift */; };
 		9079BBB8271FB9BD00950E03 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9079BBB7271FB9BD00950E03 /* LoginViewController.swift */; };
@@ -30,12 +30,12 @@
 		4A99EBAF2717E0CD005EFE95 /* TTN Greetings App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TTN Greetings App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A99EBB22717E0CD005EFE95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A99EBB42717E0CD005EFE95 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4A99EBB62717E0CD005EFE95 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4A99EBB92717E0CD005EFE95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4A99EBBB2717E0CE005EFE95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A99EBBE2717E0CE005EFE95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A99EBC02717E0CE005EFE95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A99EBC62717E19D005EFE95 /* CustomProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProtocols.swift; sourceTree = "<group>"; };
+		903D330227214DA400B4B100 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		9079BBB2271FB5EC00950E03 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		9079BBB4271FB60A00950E03 /* Clients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clients.swift; sourceTree = "<group>"; };
 		9079BBB7271FB9BD00950E03 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +84,7 @@
 				4A99EBB22717E0CD005EFE95 /* AppDelegate.swift */,
 				4A99EBB42717E0CD005EFE95 /* SceneDelegate.swift */,
 				4A99EBC62717E19D005EFE95 /* CustomProtocols.swift */,
+				903D330227214DA400B4B100 /* Extensions.swift */,
 				4A99EBB82717E0CD005EFE95 /* Main.storyboard */,
 				4A99EBBB2717E0CE005EFE95 /* Assets.xcassets */,
 				4A99EBBD2717E0CE005EFE95 /* LaunchScreen.storyboard */,
@@ -105,7 +106,6 @@
 		9079BBB6271FB96F00950E03 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4A99EBB62717E0CD005EFE95 /* ViewController.swift */,
 				9079BBB7271FB9BD00950E03 /* LoginViewController.swift */,
 				9079BBB9271FB9F200950E03 /* UserInfoViewController.swift */,
 				9079BBBB271FBA0500950E03 /* GreetViewController.swift */,
@@ -205,7 +205,7 @@
 				9079BBCA271FCDAB00950E03 /* ClientInfoTableViewCell.swift in Sources */,
 				9079BBBA271FB9F200950E03 /* UserInfoViewController.swift in Sources */,
 				9079BBB8271FB9BD00950E03 /* LoginViewController.swift in Sources */,
-				4A99EBB72717E0CD005EFE95 /* ViewController.swift in Sources */,
+				903D330327214DA400B4B100 /* Extensions.swift in Sources */,
 				4A99EBB32717E0CD005EFE95 /* AppDelegate.swift in Sources */,
 				4A99EBB52717E0CD005EFE95 /* SceneDelegate.swift in Sources */,
 				9079BBBE271FC6E400950E03 /* User.swift in Sources */,
