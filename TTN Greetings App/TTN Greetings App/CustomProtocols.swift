@@ -19,3 +19,22 @@ protocol ShowToastProtocol {
     func showToastMsg(title: String, message: String)
 }
 
+
+protocol Roundable {
+    func round()
+}
+
+protocol Bordable {
+    func setBorder()
+}
+
+protocol Loadable: AnyObject {
+    func loadIndicator(onView view: UIView)
+}
+
+/** error Protocol */
+protocol ErrorViewProtocol: AnyObject {
+    func showError(onView view: UIView)
+}
+
+
