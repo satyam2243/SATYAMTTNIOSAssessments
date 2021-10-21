@@ -46,8 +46,34 @@ class NetworkManager {
             
             dataTask.resume()
         }
+    }
+    
+    
+    func requestComment(completionBlock: @escaping (_ response: Any?,_ error: Error?) -> Void) {
         
-//        // ToDo: Start the Data task
-//        completionBlock(nil, nil)
+        if let url = URL(string: "https://jsonplaceholder.typicode.com/posts/1/comments") {
+        
+            let dataTask = defaultSession.dataTask(with: url) { data, response, error in
+                guard let responseData = data else {
+                    completionBlock(nil, error)
+                    return
+                }
+
+                // Codable approach
+                do {
+                    let decoder = JSONDecoder()
+                    
+                        let decodedData = try decoder.decode([EmployeeComments].self, from: responseData)
+
+                        completionBlock(decodedData, nil)
+
+                } catch let error as NSError {
+                    print("Failed to load: \(error.localizedDescription)")
+                    completionBlock(nil, error)
+                }
+            }
+            
+            dataTask.resume()
+        }
     }
 }

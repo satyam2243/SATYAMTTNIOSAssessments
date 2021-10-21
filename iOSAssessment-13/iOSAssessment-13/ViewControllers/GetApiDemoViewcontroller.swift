@@ -31,7 +31,7 @@ struct EmployeesPostsJSONData: Codable {
 }
 
 
-class EmployeePostsVC: UIViewController {
+class GetApiDemoViewcontroller: UIViewController {
 
     @IBOutlet weak var demoTableView: UITableView!
     
@@ -79,7 +79,7 @@ class EmployeePostsVC: UIViewController {
     
 }
 
-extension EmployeePostsVC: UITableViewDelegate, UITableViewDataSource {
+extension GetApiDemoViewcontroller: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count
     }

@@ -29,7 +29,7 @@ class AddCommentsVC: UIViewController {
             
             let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
             
-            let vc = storyboard.instantiateViewController(withIdentifier: "EmployeeCommetsVC") as? EmployeeCommetsVC
+            let vc = storyboard.instantiateViewController(withIdentifier: "EmployeeCommetsVC") as? PostApiDemoViewController
             
             self.navigationController?.pushViewController(vc!, animated: true)
             
