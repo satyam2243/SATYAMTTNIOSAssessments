@@ -7,87 +7,64 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, ShowToastProtocol{
     
+    //MARK: - IBOutlets
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var userEmailTextField: UITextField!
     @IBOutlet weak var userPhoneTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    private let UserDatabase = [User(username: "Satyam", password: "12345678")]
     
-    var logableDelegate: Loggable?
-    var showToastDelegate: ShowToastProtocol?
-    
+    //MARK: - ViewController Life Cycle Mthode
     override func viewDidLoad() {
         super.viewDidLoad()
-        logableDelegate = self
-        showToastDelegate = self
     }
     
+    
+    //MARK: - IBActions
     @IBAction func loginButton(_ sender: UIButton) {
-        
-        if (self.usernameTextField.text?.isFieldEmpty != false && self.userPhoneTextField.text?.isFieldEmpty != false && self.passwordTextField.text?.isFieldEmpty != false && self.userEmailTextField.text?.isFieldEmpty != false) {
-            
+        let success = saveUserInfo()
+        guard success else {
             // show toast fill all fields
-            showToastDelegate?.showToastMsg(title: "LoginFailed", message: "Fill All Fields")
-            
-        } else {
-            if ((logableDelegate?.isUserLoggedIn) != nil) {
-                 navigateToUserProfile()
-            } else {
-                logableDelegate?.saveUserInfo()
-                navigateToUserProfile()
-            }
+            showToastMsg(title: "LoginFailed", message: "Fill All Fields Or Password should not greater then 8 characters")
+            return
         }
+        UserDefaults.standard.set(true, forKey: "isLogin")
+        Utility.setRoot()
+        
         
     }
     
-    private func navigateToUserProfile() {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "UserInfoViewController") as? UserInfoViewController
-        vc?.userPhone = self.userPhoneTextField.text ?? "defaultUser@gmail.com"
-        vc?.username =  self.usernameTextField.text ?? "DefaultUser"
-        vc?.userEmail = self.userEmailTextField.text ?? "123456789"
-        self.navigationController?.pushViewController(vc!, animated: true)
-    }
-}
-
-extension LoginViewController: UITextFieldDelegate {
-    
 }
 
 
+//MARK: - Comfirming Protocols
 extension LoginViewController: Loggable {
-
+    
     var isUserLoggedIn: Bool {
-        if UserDefaults.standard.bool(forKey: "usernsme") {
-            return true
-        } else {
-            return false
-        }
+        return UserDefaults.standard.bool(forKey: "username")
     }
-
-    func saveUserInfo() {
+    
+    func saveUserInfo() -> Bool {
         
-        let userName = self.usernameTextField.text
-        let userEmail = self.userEmailTextField.text
-        let userPhone = self.userPhoneTextField.text
-        
-        UserDefaults.setValue(userName, forKey: "username")
-        UserDefaults.setValue(userEmail, forKey: "useremail")
-        UserDefaults.setValue(userPhone, forKey: "userphone")
+        if (usernameTextField.isFieldEmpty || userPhoneTextField.isFieldEmpty || passwordTextField.isValidPassword || userEmailTextField.isFieldEmpty ) {
+            return false
+        } else {
+            let userName = self.usernameTextField.text
+            let userEmail = self.userEmailTextField.text
+            let userPhone = self.userPhoneTextField.text
+            UserDefaults.standard.setValue(userName, forKey: "username")
+            UserDefaults.standard.setValue(userEmail, forKey: "useremail")
+            UserDefaults.standard.setValue(userPhone, forKey: "userphone")
+            return true
+        }
     }
     
     func removeUserInfo() {
         UserDefaults.standard.removeObject(forKey: "username")
         UserDefaults.standard.synchronize()
     }
-
-}
-
-extension LoginViewController: ShowToastProtocol {
     
-    func showToastMsg(title: String, message: String) {
-      alertShow(title: title, message: message)
-    }
 }
+

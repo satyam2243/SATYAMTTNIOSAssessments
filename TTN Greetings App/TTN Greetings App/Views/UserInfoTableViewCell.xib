@@ -81,11 +81,11 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="UserView" destination="1Pl-DC-U6T" id="PnL-zo-aS5"/>
                 <outlet property="employeeId" destination="DBU-5J-qTL" id="HJ7-gD-vwX"/>
                 <outlet property="userEmail" destination="dh2-iz-ko6" id="oba-Wf-nlZ"/>
                 <outlet property="userImage" destination="WGX-rb-RgT" id="jIi-IC-dk6"/>
                 <outlet property="userPhone" destination="pAk-a1-C8A" id="25E-1W-uGt"/>
+                <outlet property="userView" destination="1Pl-DC-U6T" id="PnL-zo-aS5"/>
                 <outlet property="username" destination="hc9-V9-tMR" id="vEP-Jz-POM"/>
             </connections>
             <point key="canvasLocation" x="192.0289855072464" y="129.91071428571428"/>

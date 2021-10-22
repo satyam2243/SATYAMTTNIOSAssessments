@@ -8,7 +8,6 @@
 import Foundation
 import UIKit
 
-// let date = Date()
 
 extension Date {
     var formattedDate: String {
@@ -26,7 +25,6 @@ extension String {
     var isFieldEmpty: Bool {
        // return self.isEmpty
         self.isEmpty
-        
     }
     
     var isValidPassword: Bool {
@@ -35,16 +33,13 @@ extension String {
     
 }
 
-extension UIViewController {
-    
-    func alertShow(title: String, message: String) {
-        // create the alert
-        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
-        
-        alert.addAction(UIAlertAction(title: "ok", style: UIAlertAction.Style.cancel, handler: nil))
-
-        // show the alert
-        self.present(alert, animated: true, completion: nil)
+extension UITextField: Validator {
+    var isFieldEmpty: Bool {
+        self.text?.isEmpty ?? true
     }
-
+    
+//    var isValidPassword: Bool {
+//        (self.text?.count ?? 0) > 8 
+//    }
 }
+

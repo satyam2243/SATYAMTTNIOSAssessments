@@ -14,12 +14,11 @@ class ClientInfoTableViewCell: UITableViewCell {
     @IBOutlet weak var clientPhone: UILabel!
     @IBOutlet weak var clientImage: UIImageView!
     @IBOutlet weak var ClientAndEmployeeView: UIView!
-    
-    var roundimageDelegate: Roundable?
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        roundimageDelegate = self
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -30,15 +29,16 @@ class ClientInfoTableViewCell: UITableViewCell {
     
     
     override func layoutSubviews() {
-        self.roundimageDelegate?.round()
+       
+    }
+    
+    func configureUI(){
+        setBorder(on: ClientAndEmployeeView)
+        round(on: clientImage)
     }
 }
 
-extension ClientInfoTableViewCell: Roundable {
+extension ClientInfoTableViewCell: Roundable , Bordable{
     
-    func round() {
-        clientImage.layer.cornerRadius = clientImage.layer.frame.height / 2
-        clientImage.layer.masksToBounds = true
-    }
-    
+
 }

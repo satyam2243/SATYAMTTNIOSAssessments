@@ -9,6 +9,7 @@ import UIKit
 
 class GreetViewController: UIViewController {
 
+    //MARK: - IBOutlets
     @IBOutlet weak var id: UILabel!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var email: UILabel!
@@ -17,31 +18,24 @@ class GreetViewController: UIViewController {
     @IBOutlet weak var img: UIImageView!
     @IBOutlet weak var greetView: UIView!
 
+    //MARK: - Proprties
     var detailedClientData = [Clients]()
     var detailedEmployeeData = [Employee]()
     
-    var imgRoundDelegate: Roundable?
-    var imgBorderSetDelegate: Bordable?
-    var greetViewSetBorderDelegate: Bordable?
-    var showAlertDelegate: ShowToastProtocol?
     
+    //MARK: - ViewController LifeCylce
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.navigationController?.isNavigationBarHidden = false
-        imgRoundDelegate = self
-        imgBorderSetDelegate = self
-        greetViewSetBorderDelegate = self
-        showAlertDelegate = self
-        
         SetUp()
     }
 
+    
+    //MARK: - Custom Methods
     func SetUp() {
         
-        self.imgRoundDelegate?.round()
-        self.imgBorderSetDelegate?.setBorder()
-        //self.greetViewSetBorderDelegate?.setBorder()
+        setBorder(on: img, for: 3.0 ,with: .blue)
+        round(on: img)
         
         if(detailedClientData.count > detailedEmployeeData.count) {
             for item in detailedClientData {
@@ -52,7 +46,7 @@ class GreetViewController: UIViewController {
                 self.phoneNo.text = "PhoneNo. : " + item.phoneNumber
                 self.img.image = UIImage(named: "\(item.image)")
             }
-        } else {
+        } else if (detailedClientData.count > detailedEmployeeData.count){
             for item in detailedEmployeeData {
                 self.id.text = "EmployeeID : " + String(item.id)
                 self.name.text = "Name : " + item.fName + item.lName
@@ -61,12 +55,21 @@ class GreetViewController: UIViewController {
                 self.phoneNo.text = "PhoneNo. : " + item.phoneNumber
                 self.img.image = UIImage(named: "\(item.imageUser)")
             }
+        } else {
+            self.name.text = "Name : " + (UserDefaults.standard.value(forKey: "username") as? String ?? "")
+            self.email.text = "Email : " + (UserDefaults.standard.value(forKey: "useremail") as? String ?? "")
+            //self.Address.text = "Address : + (UserDefaults.standard.value(forKey: "username"))
+            self.phoneNo.text = "PhoneNo. : " + (UserDefaults.standard.value(forKey: "userphone") as? String ?? "")
+            self.img.image = UIImage(named: "img1")
         }
+    
 
     }
     
+    
+    //MARK: - IBActions
     @IBAction func greetUserButton(_ sender: UIBarButtonItem) {
-        showAlertDelegate?.showToastMsg(title: "Greetings", message: "Welcome Mr. \(name.text ?? "Guest")")
+        showToastMsg(title: "Greetings", message: "Welcome Mr. \(name.text ?? "Guest")")
     }
     
     @IBAction func logouButton(_ sender: UIButton) {
@@ -75,26 +78,16 @@ class GreetViewController: UIViewController {
         UserDefaults.standard.removeObject(forKey: "userphone")
         UserDefaults.standard.synchronize()
         
-        showAlertDelegate?.showToastMsg(title: "Hey", message: "LoggedOutSuccessFully")
-        
+        showToastMsg(title: "Hey", message: "LoggedOutSuccessFully")
+        UserDefaults.standard.set(false, forKey: "isLogin")
+        Utility.setRoot()
         self.navigationController?.popToRootViewController(animated: true)
     }
     
 }
 
+
+//MARK: - Protocol Confirming
 extension GreetViewController : Roundable, Bordable, ShowToastProtocol {
-    
-    func showToastMsg(title: String, message: String) {
-       alertShow(title: title, message: message)
-    }
-    
-    func round() {
-        self.img.layer.cornerRadius = self.img.layer.frame.width / 2
-    }
-    
-    func setBorder() {
-        self.img.layer.borderWidth = 3
-        self.img.layer.borderColor = UIColor.blue.cgColor
-    }
-    
+ 
 }

@@ -94,7 +94,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Jz-j6-Csl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1696.8" y="79.610194902548727"/>
+            <point key="canvasLocation" x="1433" y="80"/>
         </scene>
         <!--User Info View Controller-->
         <scene sceneID="sdE-Ux-Y1M">
@@ -125,7 +125,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QA2-cv-WlL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2604" y="80"/>
+            <point key="canvasLocation" x="2319" y="80"/>
         </scene>
         <!--Greet View Controller-->
         <scene sceneID="GCT-z1-bqr">
@@ -136,7 +136,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="efy-uG-x7F">
-                                <rect key="frame" x="30" y="74" width="315" height="563"/>
+                                <rect key="frame" x="30" y="30" width="315" height="607"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WH2-IZ-S4c">
                                         <rect key="frame" x="57.5" y="425" width="200" height="38"/>
@@ -165,14 +165,14 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h65-6r-o8N">
-                                <rect key="frame" x="112.5" y="104" width="150" height="150"/>
+                                <rect key="frame" x="112.5" y="60" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="DDU-cK-Nh6"/>
                                     <constraint firstAttribute="height" constant="150" id="pDC-sK-XOa"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qeV-1a-bvL">
-                                <rect key="frame" x="144.5" y="284" width="86" height="150"/>
+                                <rect key="frame" x="144.5" y="240" width="86" height="150"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5YT-Hb-1QX">
                                         <rect key="frame" x="0.0" y="0.0" width="19" height="14"/>
@@ -244,25 +244,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rnb-Jp-b9h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4311" y="80"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="j7o-B9-Pv4">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AJ0-va-lX4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kMH-ou-WJ1" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OBM-i3-hoB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="ln0-gB-HFu" kind="relationship" relationship="rootViewController" id="3b1-8L-A0x"/>
-                    </connections>
-                </navigationController>
-            </objects>
-            <point key="canvasLocation" x="3569" y="80"/>
+            <point key="canvasLocation" x="3066" y="80"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HcT-SK-dXS">
