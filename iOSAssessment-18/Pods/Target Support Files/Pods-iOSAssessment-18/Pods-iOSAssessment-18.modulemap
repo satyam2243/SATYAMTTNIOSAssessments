@@ -1,0 +1,6 @@
+framework module Pods_iOSAssessment_18 {
+  umbrella header "Pods-iOSAssessment-18-umbrella.h"
+
+  export *
+  module * { export * }
+}
