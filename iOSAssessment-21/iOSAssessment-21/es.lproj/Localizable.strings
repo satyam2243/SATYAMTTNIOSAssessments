@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  iOSAssessment-21
+
+  Created by satyam dixit on 27/10/21.
+  
+*/
+
+"title" = "Localización de aplicaciones";
+"namekey" = "Nombre :";
+"mynamekey" = "Satyam Dixit";
+"statekey" = "estado :";
+"mystatekey" = "UttarPradesh";
+"countrykey" = "país :";
+"mycountrykey" = "India";
+"dobkey" = "Fecha de cumpleaños :";
+"mydobkey" = "12/05/1999";
+"lotterykey" = "Lotería ganada :";
+"amountkey" = "114.85 Euro";
