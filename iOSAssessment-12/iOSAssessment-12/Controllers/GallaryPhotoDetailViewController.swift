@@ -32,8 +32,8 @@ class GallaryPhotoDetailViewController: UIViewController, round {
        // setUpNavBar(of: UIColor().customBlueColor)
         addLogoToNavigationBarItem()
         
-        let link = defaultLink + imageId
-        imageView.downloaded(from: link)
+//        let link = defaultLink + imageId
+//        imageView.downloaded(from: link)
     
     }
 

@@ -15,7 +15,7 @@ class GalleryViewController: UIViewController {
     
     //MARK: - Properties
     var imageList = [Images]()
-    
+    var queue = OperationQueue()
     
     //MARK: - Life Cycle
     override func viewDidLoad() {
@@ -72,7 +72,20 @@ extension GalleryViewController: UICollectionViewDelegate, UICollectionViewDataS
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GalleryItemsCollectionViewCell", for: indexPath) as! GalleryItemsCollectionViewCell
         cell.galleryItemName.text = imageList[indexPath.row].author.capitalized
         let completeLink = defaultLink + String(imageList[indexPath.row].id)
-        cell.galleryItemImage.downloaded(from: completeLink)
+        //cell.galleryItemImage.downloaded(from: completeLink)
+        
+        var img: UIImage!
+        let operation = BlockOperation(block: {
+            img  = Downloader.downloadImageWithURl(completeLink)
+        })
+
+        operation.completionBlock = {
+            DispatchQueue.main.async {
+                cell.galleryItemImage.image = img
+            }
+
+        }
+        queue.addOperation(operation)
         
         return cell
         
@@ -118,4 +131,14 @@ extension GalleryViewController: UICollectionViewDelegateFlowLayout {
         return 20
     }
     
+}
+
+class Downloader {
+    class func downloadImageWithURl(_ url: String) -> UIImage! {
+        if let data = try? Data(contentsOf: URL(string: url)!) {
+            return UIImage(data: data)!
+        }
+        return nil
+    }
+
 }
