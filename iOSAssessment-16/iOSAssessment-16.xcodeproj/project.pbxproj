@@ -18,6 +18,7 @@
 		4A05449E2729095E00EC9314 /* iOSAssessment_16UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A05449D2729095E00EC9314 /* iOSAssessment_16UITestsLaunchTests.swift */; };
 		4A0544AB27290D6B00EC9314 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0544AA27290D6B00EC9314 /* Model.swift */; };
 		4A0544B02729100100EC9314 /* ValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0544AF2729100100EC9314 /* ValidationTests.swift */; };
+		90ACA31A273264CC00D172A6 /* Theory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ACA319273264CC00D172A6 /* Theory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		4A05449D2729095E00EC9314 /* iOSAssessment_16UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSAssessment_16UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4A0544AA27290D6B00EC9314 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		4A0544AF2729100100EC9314 /* ValidationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationTests.swift; sourceTree = "<group>"; };
+		90ACA319273264CC00D172A6 /* Theory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		4A05446E2729095C00EC9314 = {
 			isa = PBXGroup;
 			children = (
+				90ACA319273264CC00D172A6 /* Theory.swift */,
 				4A0544792729095C00EC9314 /* iOSAssessment-16 */,
 				4A0544902729095E00EC9314 /* iOSAssessment-16Tests */,
 				4A05449A2729095E00EC9314 /* iOSAssessment-16UITests */,
@@ -291,6 +294,7 @@
 				4A05447F2729095C00EC9314 /* LoginViewController.swift in Sources */,
 				4A05447B2729095C00EC9314 /* AppDelegate.swift in Sources */,
 				4A05447D2729095C00EC9314 /* SceneDelegate.swift in Sources */,
+				90ACA31A273264CC00D172A6 /* Theory.swift in Sources */,
 				4A0544AB27290D6B00EC9314 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
