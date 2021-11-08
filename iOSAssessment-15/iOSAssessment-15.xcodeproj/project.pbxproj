@@ -16,6 +16,7 @@
 		907934C32738D80F00DF77C1 /* DataPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907934C22738D80F00DF77C1 /* DataPageViewController.swift */; };
 		907934C52738D82B00DF77C1 /* DisplayPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907934C42738D82B00DF77C1 /* DisplayPageViewController.swift */; };
 		907934CA2738DB3000DF77C1 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907934C92738DB3000DF77C1 /* Profile.swift */; };
+		907934CC2738DD8500DF77C1 /* Theory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907934CB2738DD8500DF77C1 /* Theory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		907934C22738D80F00DF77C1 /* DataPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPageViewController.swift; sourceTree = "<group>"; };
 		907934C42738D82B00DF77C1 /* DisplayPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayPageViewController.swift; sourceTree = "<group>"; };
 		907934C92738DB3000DF77C1 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		907934CB2738DD8500DF77C1 /* Theory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				907934B72738D33D00DF77C1 /* Assets.xcassets */,
 				907934B92738D33D00DF77C1 /* LaunchScreen.storyboard */,
 				907934BC2738D33D00DF77C1 /* Info.plist */,
+				907934CB2738DD8500DF77C1 /* Theory.swift */,
 			);
 			path = "iOSAssessment-15";
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 				907934CA2738DB3000DF77C1 /* Profile.swift in Sources */,
 				907934B32738D33B00DF77C1 /* ProfilePageViewController.swift in Sources */,
 				907934C32738D80F00DF77C1 /* DataPageViewController.swift in Sources */,
+				907934CC2738DD8500DF77C1 /* Theory.swift in Sources */,
 				907934AF2738D33B00DF77C1 /* AppDelegate.swift in Sources */,
 				907934B12738D33B00DF77C1 /* SceneDelegate.swift in Sources */,
 			);
