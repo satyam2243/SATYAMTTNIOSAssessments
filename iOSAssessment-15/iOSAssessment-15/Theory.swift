@@ -8,6 +8,9 @@
 import Foundation
 
 /**
+ 
+ Q3. attached a demo for local notification in this branch. named as "UNUserLocalNotificationDemo"
+ 
  Q4. What is push payload size in iOS?
  Sol: Push payload size is maximum size of the type of push notification
 
