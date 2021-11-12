@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		90311440273D035500DD1537 /* Recipe+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9031143E273D035500DD1537 /* Recipe+CoreDataClass.swift */; };
 		90311441273D035500DD1537 /* Recipe+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9031143F273D035500DD1537 /* Recipe+CoreDataProperties.swift */; };
+		9042170C273E2BB900399140 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9042170B273E2BB900399140 /* CoreDataManager.swift */; };
 		907934642738AF9500DF77C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907934632738AF9500DF77C1 /* AppDelegate.swift */; };
 		907934662738AF9500DF77C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907934652738AF9500DF77C1 /* SceneDelegate.swift */; };
 		907934682738AF9500DF77C1 /* RecipiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907934672738AF9500DF77C1 /* RecipiesViewController.swift */; };
@@ -48,6 +49,7 @@
 /* Begin PBXFileReference section */
 		9031143E273D035500DD1537 /* Recipe+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipe+CoreDataClass.swift"; sourceTree = "<group>"; };
 		9031143F273D035500DD1537 /* Recipe+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipe+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9042170B273E2BB900399140 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		907934602738AF9500DF77C1 /* iOSAssessment-23.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOSAssessment-23.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		907934632738AF9500DF77C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		907934652738AF9500DF77C1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				9079349C2738B3F400DF77C1 /* Utility.swift */,
 				9031143E273D035500DD1537 /* Recipe+CoreDataClass.swift */,
 				9031143F273D035500DD1537 /* Recipe+CoreDataProperties.swift */,
+				9042170B273E2BB900399140 /* CoreDataManager.swift */,
 				907934692738AF9500DF77C1 /* Main.storyboard */,
 				9079346F2738AF9700DF77C1 /* Assets.xcassets */,
 				907934712738AF9700DF77C1 /* LaunchScreen.storyboard */,
@@ -324,6 +327,7 @@
 				90B019C5273C2D4100CBC522 /* Recipies.swift in Sources */,
 				907934992738B26600DF77C1 /* FavouritesViewController.swift in Sources */,
 				907934662738AF9500DF77C1 /* SceneDelegate.swift in Sources */,
+				9042170C273E2BB900399140 /* CoreDataManager.swift in Sources */,
 				90311441273D035500DD1537 /* Recipe+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
