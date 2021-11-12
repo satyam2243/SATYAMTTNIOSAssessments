@@ -19,20 +19,10 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="oKr-yw-bfl">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZ6-t5-iu4">
-                                <rect key="frame" x="173.5" y="432.5" width="67" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                <connections>
-                                    <action selector="addButtonTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Y9-GH-ziS"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="NZ6-t5-iu4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1mo-6e-xhG"/>
-                            <constraint firstItem="NZ6-t5-iu4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Chj-fN-tWL"/>
                             <constraint firstItem="oKr-yw-bfl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IzP-Wc-v86"/>
                             <constraint firstItem="oKr-yw-bfl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="UNt-kZ-DyL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oKr-yw-bfl" secondAttribute="bottom" id="ejD-S0-W8r"/>
@@ -40,7 +30,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="button" destination="NZ6-t5-iu4" id="8Zo-GZ-wkH"/>
                         <outlet property="mapView" destination="oKr-yw-bfl" id="Ljs-FI-V4j"/>
                     </connections>
                 </viewController>
