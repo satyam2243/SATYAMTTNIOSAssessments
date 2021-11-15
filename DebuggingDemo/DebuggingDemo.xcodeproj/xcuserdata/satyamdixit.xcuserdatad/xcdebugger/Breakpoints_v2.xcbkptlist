@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "FB3C7CE7-7DE8-4466-836A-7D99B1C7D9E4"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "20011520-8A76-415C-A137-29448F069BE7"
+            shouldBeEnabled = "Yes"
+            condition = "count % 2 == 0"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DebuggingDemo/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "addBtn(_:)"
+            landmarkType = "7">
+            <Actions>
+               <BreakpointActionProxy
+                  ActionExtensionID = "Xcode.BreakpointAction.DebuggerCommand">
+                  <ActionContent
+                     consoleCommand = "p &quot;even count&quot;">
+                  </ActionContent>
+               </BreakpointActionProxy>
+            </Actions>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0CC9D42E-1964-4716-8423-6486EED75727"
+            shouldBeEnabled = "Yes"
+            condition = "count &lt; 1"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DebuggingDemo/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "minusbtn(_:)"
+            landmarkType = "7">
+            <Actions>
+               <BreakpointActionProxy
+                  ActionExtensionID = "Xcode.BreakpointAction.Sound">
+                  <ActionContent
+                     soundName = "Bottle">
+                  </ActionContent>
+               </BreakpointActionProxy>
+            </Actions>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
