@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="47s-cI-cwj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="W3z-Si-tNv">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
@@ -27,6 +27,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Toss a Coin">
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="CwI-5g-mWu" kind="show" id="ee9-iR-p5u"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PqW-RC-Hjq">
                                         <rect key="frame" x="0.0" y="90" width="198" height="50"/>
@@ -36,6 +39,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Roll the Dice">
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="47s-cI-cwj" kind="show" id="77Z-DA-xuP"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -47,10 +53,11 @@
                             <constraint firstItem="xgX-fs-iLM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oMh-Um-HQc"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="2Zj-W8-zIr"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="65.625"/>
+            <point key="canvasLocation" x="928.98550724637687" y="65.625"/>
         </scene>
         <!--Coin View Controller-->
         <scene sceneID="xDg-Qz-fj8">
@@ -72,7 +79,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toss the Coin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="37V-ce-LA5">
-                                <rect key="frame" x="30" y="84" width="354" height="42"/>
+                                <rect key="frame" x="30" y="128" width="354" height="42"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -111,13 +118,14 @@
                             <constraint firstItem="37V-ce-LA5" firstAttribute="leading" secondItem="A1Q-kh-ATZ" secondAttribute="leading" constant="30" id="r88-Nc-BUZ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="T7j-cd-71m"/>
                     <connections>
                         <outlet property="coinShowLbl" destination="4Ap-2D-4Gh" id="gvC-v2-WMv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R6f-pj-Cu4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="779.71014492753625" y="-55.580357142857139"/>
+            <point key="canvasLocation" x="1689.8550724637682" y="-55.580357142857139"/>
         </scene>
         <!--Dice View Controller-->
         <scene sceneID="RGg-uN-zUk">
@@ -139,7 +147,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roll the Dice" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3m-1E-Zb6">
-                                <rect key="frame" x="30" y="94" width="354" height="42"/>
+                                <rect key="frame" x="30" y="138" width="354" height="42"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -178,13 +186,32 @@
                             <constraint firstItem="osU-QF-Gba" firstAttribute="centerX" secondItem="U8R-hL-jsr" secondAttribute="centerX" id="uba-bq-LeE"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="dXO-Un-uyh"/>
                     <connections>
                         <outlet property="showDiceLbl" destination="osU-QF-Gba" id="grO-7Z-D55"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8QQ-m1-FcP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="800" y="654"/>
+            <point key="canvasLocation" x="1710.144927536232" y="653.57142857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="meB-ri-4rP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="W3z-Si-tNv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="A2b-bS-TDM">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="CcE-fi-uQl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T8b-se-Ajm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="65.625"/>
         </scene>
     </scenes>
     <resources>
