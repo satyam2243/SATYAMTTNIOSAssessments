@@ -49,6 +49,10 @@ class RecipiesDetailsViewController: UIViewController {
             return
         }
         
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy'-'MM'-'dd"
+        let date = dateFormatter.date(from: dateToSAve)
+        
         guard let createdBytextField = createdByTf, let createdByToSAve = createdBytextField.text else {
             return
         }
@@ -57,7 +61,7 @@ class RecipiesDetailsViewController: UIViewController {
             return
         }
         
-        self.save(name: nameToSAve, ingredients: <#T##String?#>, date: <#T##Date?#>, createdBy: <#T##String?#>, timeToPrepare: <#T##Float#>)
+        self.save(name: nameToSAve, ingredients: ingrediantesToSAve, date: date, createdBy: createdByToSAve, timeToPrepare: Float(timeToPrepareToSAve) ?? 0.0)
         
     }
     
